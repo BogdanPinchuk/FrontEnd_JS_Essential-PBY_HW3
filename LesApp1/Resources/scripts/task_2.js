@@ -5,10 +5,6 @@ const Pi = 3.1415926535;
 let r = Number(prompt("Введите радиус цилиндра"));
 let h = Number(prompt("Введите высоту цилиндра"));
 
-let a = r <= 0;
-let b = h <= 0;
-let c = a || b;
-
 if (!(Boolean(r) && Boolean(h))) {
     alert("Некоректный ввод значения.");
 } else if (r <= 0 || h <= 0) {
