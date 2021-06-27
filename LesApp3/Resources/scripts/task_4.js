@@ -31,7 +31,7 @@ else if (total >= 1500) {
 }
 
 // варіант 2 - реалізація через switch
-
+/*
 let ans = (total / 500) - ((total / 500) % 1);
 
 // врахування від'ємних значень
@@ -55,7 +55,7 @@ switch (ans) {
         discont = 15;
         break;
 }
-
+*/
 
 console.log(`Общая сумма по продукту '${product1}' составляет ${totalPriceProduct1}`);
 console.log(`Общая сумма по продукту '${product2}' составляет ${totalPriceProduct2}`);
