@@ -19,6 +19,7 @@ let total = totalPriceProduct1 + totalPriceProduct2 + totalPriceProduct3;
 // знижка
 let discont = 0;
 
+// згідно умови - використати підходящу умову
 if (500 <= total && total < 1000) {
     discont = 5;
 }
@@ -29,6 +30,29 @@ else if (total >= 1500) {
     discont = 15;
 }
 
+// варіант 2 - реалізація через switch
+/*
+let ans = (total / 500) - ((total / 500) % 1);
+
+// врахування від'ємних значень
+ans *= (ans >= 0);
+
+switch (ans) {
+    case 0:
+        discont = 0;
+        break;
+    case 1:
+        discont = 5;
+        break;
+    case 2:
+        discont = 10;
+        break;
+    default:
+        discont = 15;
+        break;
+}
+*/
+
 console.log(`Общая сумма по продукту '${product1}' составляет ${totalPriceProduct1}`);
 console.log(`Общая сумма по продукту '${product2}' составляет ${totalPriceProduct2}`);
 console.log(`Общая сумма по продукту '${product3}' составляет ${totalPriceProduct3}`);
@@ -36,6 +60,7 @@ console.log(`Общая сумма по продукту '${product3}' сост�
 // врахування знижки
 if (discont > 0) {
     total -= total * discont / 100;
+    console.log(`Скидка ${discont}%`);
     console.log("Стоимость заказа с учетем скидки " + total.toFixed(3));
 }
 else {
