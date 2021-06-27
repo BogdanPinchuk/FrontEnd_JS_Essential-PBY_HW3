@@ -31,27 +31,31 @@ else if (total >= 1500) {
 }
 
 // варіант 2 - реалізація через switch
-/*
+
 let ans = (total / 500) - ((total / 500) % 1);
 
 // врахування від'ємних значень
 ans *= (ans >= 0);
 
 switch (ans) {
+    // 0 - 500
     case 0:
         discont = 0;
         break;
+    // 500 - 1000
     case 1:
         discont = 5;
         break;
+    // 1000 - 1500
     case 2:
         discont = 10;
         break;
+    // > 1500
     default:
         discont = 15;
         break;
 }
-*/
+
 
 console.log(`Общая сумма по продукту '${product1}' составляет ${totalPriceProduct1}`);
 console.log(`Общая сумма по продукту '${product2}' составляет ${totalPriceProduct2}`);
